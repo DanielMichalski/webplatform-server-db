@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="TW" id="1">
+		<comment>Initialization of database</comment>
+		<createTable schemaName="${db.liquibase.schema.name}" tableName="products" tablespace="${db.liquibase.tablespace.tables}">
+            <column autoIncrement="true" name="product_no" type="bigserial">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="product_no" />
+            </column>
+            <column name="text" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="price" type="int8)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable schemaName="${db.liquibase.schema.name}" tableName="orders" tablespace="${db.liquibase.tablespace.tables}">
+            <column autoIncrement="true" name="product_id" type="bigserial">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="order_id" />
+            </column>
+            <column name="quantity" type="int8">
+                <constraints nullable="false" />
+            </column>
+		</createTable>
+	</changeSet>
+</databaseChangeLog>

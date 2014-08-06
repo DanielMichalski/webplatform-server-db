@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="Mr Phi (generated)" id="1407161247869-1">
+        <createTable tableName="orders">
+            <column name="order_id" type="INT4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_no" type="INT4"/>
+            <column name="quantity" type="INT4"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Mr Phi (generated)" id="1407161247869-2">
+        <createTable tableName="products">
+            <column name="product_no" type="INT4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="price" type="numeric"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Mr Phi (generated)" id="1407161247869-3">
+        <addPrimaryKey columnNames="order_id" constraintName="orders_pkey" tableName="orders"/>
+    </changeSet>
+    <changeSet author="Mr Phi (generated)" id="1407161247869-4">
+        <addPrimaryKey columnNames="product_no" constraintName="products_pkey" tableName="products"/>
+    </changeSet>
+    <changeSet author="Mr Phi (generated)" id="1407161247869-5">
+        <addForeignKeyConstraint baseColumnNames="product_no" baseTableName="orders" constraintName="orders_product_no_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="product_no" referencedTableName="products"/>
+    </changeSet>
+    <changeSet author="Daniel" id="6">
+        <createTable tableName="testowawieczor" >
+            <column name="wieczor" type="int8"></column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
