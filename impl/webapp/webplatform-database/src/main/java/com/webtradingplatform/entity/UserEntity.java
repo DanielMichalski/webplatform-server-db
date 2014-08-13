@@ -10,13 +10,9 @@ import javax.persistence.*;
 public class UserEntity {
 
     @Id
-    @SequenceGenerator(name="user_userid_seq",
-            sequenceName="user_userid_seq",
-            allocationSize=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator="user_userid_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", updatable=false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "first_name" , length = 50,nullable = false)
     private String firstName;
@@ -24,11 +20,11 @@ public class UserEntity {
     @Column(name = "last_name" , length = 50, nullable = false)
     private String lastName;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

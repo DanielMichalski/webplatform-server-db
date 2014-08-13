@@ -11,7 +11,7 @@
     <modules>
         <module>../webplatform-common</module>
         <module>../webplatform-web</module>
-        <module>../webplatform-dao</module>
+        <module>../webplatform-repositories</module>
         <module>../webplatform-database</module>
         <module>../webplatform-service</module>
     </modules>
@@ -249,6 +249,14 @@
             <groupId>com.sun.faces</groupId>
             <artifactId>jsf-impl</artifactId>
             <version>2.1.13</version>
+        </dependency>
+
+        <!-- Spring Data JPA -->
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.6.2.RELEASE</version>
         </dependency>
 
     </dependencies>

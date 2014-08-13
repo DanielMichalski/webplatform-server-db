@@ -1,11 +1,10 @@
 package com.webtradingplatform.service.user;
 
-import com.webtradingplatform.dao.IUserDao;
 import com.webtradingplatform.entity.UserEntity;
+import com.webtradingplatform.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Author: Daniel
@@ -14,30 +13,29 @@ import java.util.List;
 public class UserService implements IUserService {
 
     @Autowired
-    private IUserDao userDao;
+    private UserRepository userRepository;
 
     @Override
-    public UserEntity registerNewUser(UserEntity user) {
-        return userDao.registerNewUser(user);
+    @Transactional
+    public UserEntity save(UserEntity user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public void removeAllRegisteredUsers() {
-        userDao.removeAllRegisteredUsers();
+    @Transactional
+    public void deleteAll() {
+        userRepository.deleteAll();
     }
 
     @Override
-    public List<UserEntity> retrieveAllRegisteredUsers() {
-        return userDao.retrieveAllRegisteredUsers();
+    @Transactional
+    public Iterable<UserEntity> findAll() {
+        return userRepository.findAll();
     }
 
     @Override
-    public void removeUser(UserEntity user) {
-        userDao.removeUser(user);
-    }
-
-    @Override
-    public UserEntity updateUserDetails(UserEntity user) {
-        return userDao.updateUserDetails(user);
+    @Transactional
+    public void deleteUser(UserEntity user) {
+        userRepository.delete(user);
     }
 }

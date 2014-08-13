@@ -13,7 +13,4 @@
         </property>
     </bean>
 
-    <import resource="mail-context.xml"/>
-    <import resource="store-context.xml"/>
-
 </beans>

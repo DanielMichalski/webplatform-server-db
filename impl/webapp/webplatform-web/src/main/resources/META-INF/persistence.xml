@@ -6,7 +6,6 @@
 
     <persistence-unit name="JpaPersistenceUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>com.webtradingplatform.entity.UserEntity</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgresPlusDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>

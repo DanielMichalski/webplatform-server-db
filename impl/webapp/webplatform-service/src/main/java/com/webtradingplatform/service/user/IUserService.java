@@ -2,20 +2,16 @@ package com.webtradingplatform.service.user;
 
 import com.webtradingplatform.entity.UserEntity;
 
-import java.util.List;
-
 /**
  * Author: Daniel
  */
 public interface IUserService {
 
-    public UserEntity registerNewUser(UserEntity user);
+    UserEntity save(UserEntity user);
 
-    public void removeAllRegisteredUsers();
+    void deleteAll();
 
-    public List<UserEntity> retrieveAllRegisteredUsers();
+    Iterable<UserEntity> findAll();
 
-    public void removeUser(UserEntity user);
-
-    public UserEntity updateUserDetails(UserEntity user);
+    void deleteUser(UserEntity user);
 }

@@ -22,7 +22,7 @@
 
         <dependency>
             <groupId>com.webtrading</groupId>
-            <artifactId>webplatform-dao</artifactId>
+            <artifactId>webplatform-repositories</artifactId>
             <version>0.1</version>
         </dependency>
 

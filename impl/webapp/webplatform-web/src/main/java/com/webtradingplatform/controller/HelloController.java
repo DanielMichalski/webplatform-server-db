@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
     @AutowiredLogger
-    Logger logger;
+    private Logger logger;
 
     @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
     public ModelAndView welcomePage() {
