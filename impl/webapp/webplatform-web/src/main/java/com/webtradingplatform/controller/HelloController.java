@@ -16,14 +16,10 @@ public class HelloController {
     private Logger logger;
 
     @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
-    public ModelAndView welcomePage() {
+    public String welcomePage() {
 
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security configuration");
-        model.addObject("message", "It works!");
-        model.setViewName("hello");
+        return "hello";
 
-        return model;
     }
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
