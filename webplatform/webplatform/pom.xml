@@ -14,6 +14,7 @@
         <module>../webplatform-repositories</module>
         <module>../webplatform-database</module>
         <module>../webplatform-service</module>
+        <module>../webplatform-db-management</module>
     </modules>
 
     <properties>
