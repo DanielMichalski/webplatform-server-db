@@ -10,16 +10,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class IndexController {
 
     @AutowiredLogger
     private Logger logger;
 
-    @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String welcomePage() {
-
-        return "hello";
-
+        return "index";
     }
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
