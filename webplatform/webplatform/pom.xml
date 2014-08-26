@@ -23,7 +23,7 @@
         <log4j.version>1.2.17</log4j.version>
         <hibernate.version>3.6.3.Final</hibernate.version>
         <junit.version>4.8.2</junit.version>
-        <jsout.version>1.7.3</jsout.version>
+        <jsoup.version>1.7.3</jsoup.version>
         <postgresql.version>9.1-901.jdbc4</postgresql.version>
         <mail.version>1.4.3</mail.version>
         <jsf.version>2.1.13</jsf.version>
@@ -141,7 +141,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>${jsout.version}</version>
+            <version>${jsoup.version}</version>
         </dependency>
 
         <!-- Hibernate -->
