@@ -48,3 +48,9 @@ public class JavaApiStreaming {
       } // end while
     }
 }
+
+
+
+
+
+http://damjan.blogspot.com/2006/12/trick-google-calendar-and-send-free-sms.html SMSes TODO
